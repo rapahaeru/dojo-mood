@@ -7,24 +7,56 @@
   <title>exemplo</title>
 </head>
 <body>
+  <style>
+    header {
+      background-color: blue;
+    }
+    .responsive-content {
+      margin: auto;
+      width: 100%;
+      max-width: 800px;
+      min-width: 320px;
+    }
+    label {
+      display: block;
+    }
+    input, textarea {
+      width: 100%;
+    }
+  </style>
   <section>
     <header>
-      <a href="linkto">niko</a>  
-      <strong>thunderbolts</strong>
+      <div class="responsive-content">
+        <a href="linkto">niko</a>  
+        <strong>thunderbolts</strong>
+      </div>
     </header>
     <section>
       <form action="">
         <fieldset>
-          <label for="">lorem ipsum dollor</label>
-          <!-- slider -->
-          <label for="">lorem ispum</label>
-          <textarea></textarea>
-          <label for="">lorem ispum</label>
-          <input type="text">
-          <button></button>
+          <div class="responsive-content">
+              <label for="">lorem ipsum dollor</label>
+              <input type="range" min="1" max="100" step="1" onchange="muda(this.value)">
+          </div>
+          <div class="responsive-content">
+              <label for="textarea">lorem ispum</label>
+              <textarea id="textarea"></textarea>
+          </div>
+          <div class="responsive-content">
+              <label for="input">lorem ispum</label>
+              <input id="input" type="text">
+          </div>
+          <div class="responsive-content">
+              <button>Envia</button>
+          </div>
         </fieldset>
       </form>
     </section>
   </section>
+  <script>
+    muda = (valor) => {
+      console.log('', valor);
+    }
+  </script>
 </body>
 </html>
